@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f0f5f9;
+}
+
+/* Splošno */
+:root {
+  --primary-color: #52616b;
+  --secondary-color: #1e2022;
+}
+
+.btn {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: var(--secondary-color);
+  border: 1px var(--primary-color) solid;
+  padding: 0.5rem 1.3rem;
+  border-radius: 7px;
+  transition: background-color 0.5s linear;
+}
+
+.btn:hover {
+  font-size: 1.32rem;
+  background-color: #5b5f622f;
+}
+
+.icons {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin: 0.5rem;
+  transition: color 1s linear;
+}
+
+.icons:hover {
+  color: var(--secondary-color);
+}
+
+/* Header navigation */
+header {
+  position: sticky;
+  top: 0;
+  background: #c9d6df;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+nav {
+  padding: 1rem;
+  background-color: transparent;
+}
+
+nav a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1.3rem;
+  margin: 0.7rem;
+  padding: 10px 10px;
+  position: relative;
+}
+
+/* Nav animation */
+nav a:before,
+nav a:after {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: var(--secondary-color);
+  content: "";
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+nav a:before {
+  top: 0px;
+  transform: translateY(10px);
+}
+
+nav a:after {
+  bottom: 0px;
+  transform: translateY(-10px);
+}
+
+nav a:hover:before,
+nav a:hover:after {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+/* Display */
+.showcase {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  background: #c9d6df;
+}
+
+.showcase-text {
+  margin-top: -8rem;
+  width: 100%;
+  text-align: center;
+}
+
+.showcase-text h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  margin: 0 auto 2rem;
+}
+
+.showcase-text h1:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 400ms ease-in-out;
+}
+
+.showcase-text h1:hover:after {
+  transform: scaleX(1);
+}
+
+.showcase-text h3 {
+  font-size: 1.9rem;
+  font-weight: 100;
+  margin: 1rem auto 2rem;
+}
+
+.showcase .arrow {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 90vh;
+  animation: arrow infinite forwards 2s ease-in-out;
+}
+
+.showcase .arrow a {
+  font-size: 3rem;
+}
+
+@keyframes arrow {
+  25% {
+    top: 88vh;
+  }
+}
+
+/* Portfolio */
+#portfolio {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#portfolio h1 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 0 auto 3rem;
+}
+
+#portfolio h1:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 400ms ease-in-out;
+}
+
+#portfolio h1:hover:after {
+  transform: scaleX(1);
+}
+
+.row {
+  background-color: #c9d6df;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+.row img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  padding-bottom: 1rem;
+}
+
+.row .text {
+  text-align: center;
+}
+
+.row .text h3 {
+  font-size: 1.9rem;
+  font-weight: 100;
+}
+
+.row .text p {
+  line-height: 1.8rem;
+  margin: 1rem auto 1rem;
+}
+
+.row .text h4 {
+  margin: 1rem 0 3rem;
+}
+
+.row .text .btn {
+  margin: 0.3rem;
+  font-size: 1.1rem;
+}
+
+/* About */
+#about {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+#about h1 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 0 auto 3rem;
+}
+
+#about h1:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 400ms ease-in-out;
+}
+
+#about h1:hover:after {
+  transform: scaleX(1);
+}
+
+.container {
+  padding: 1rem;
+  border-radius: 7px;
+  background: #c9d6df;
+  margin-bottom: 3rem;
+}
+
+.container .col {
+  margin: 2rem;
+}
+
+.container .col h3 {
+  margin: 0.6rem auto;
+  font-weight: 100;
+  font-size: 1.4rem;
+}
+
+.what-i-know {
+  height: 100%;
+  border-radius: 7px;
+  background: #c9d6df;
+  padding-bottom: 3rem;
+}
+
+#what-icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+#what-icons div {
+  width: 40%;
+}
+
+#what-icons div i {
+  font-size: 5rem;
+}
+
+#what-icons div h3 {
+  width: 100%;
+  display: block;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.what-i-know h3 {
+  display: inline-block;
+  width: 30%;
+  margin: 2rem 0;
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+/* Contact */
+#contact {
+  margin: 3rem auto;
+  text-align: center;
+  height: 100%;
+}
+
+#contact h1 {
+  font-size: 2rem;
+  font-weight: 100;
+  margin: 0 auto 3rem;
+}
+
+#contact h1:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px var(--primary-color);
+  transform: scaleX(0);
+  transition: transform 400ms ease-in-out;
+}
+
+#contact h1:hover:after {
+  transform: scaleX(1);
+}
+
+#contact p {
+  margin: 3rem 2rem 1rem;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+
+#contact a {
+  color: var(--secondary-color);
+  transition: font-size 0.5s ease-in-out;
+}
+
+#contact a:hover {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
